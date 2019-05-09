@@ -17,10 +17,22 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   if board[0] == "X" && board[1] == "X" && board[2] == "X"
-  return WIN_COMBINATIONS[0]
-elsif board[3] == "X" && board[4] == "X" && board[5] == "X"
-  return WIN_COMBINATIONS[1]
-end
+    return WIN_COMBINATIONS[0]
+  elsif board[3] == "X" && board[4] == "X" && board[5] == "X"
+    return WIN_COMBINATIONS[1]
+  elsif board[6] == "X" && board[7] == "X" && board[8] == "X"
+    return WIN_COMBINATIONS[2]
+  elsif board[0] == "X" && board[3] == "X" && board[6] == "X"
+    return WIN_COMBINATIONS[3]
+  elsif board[1] == "X" && board[4] == "X" && board[7] == "X"
+    return WIN_COMBINATIONS[4]
+  elsif board[2] == "X" && board[5] == "X" && board[8] == "X"
+    return WIN_COMBINATIONS[5]
+  elsif board[0] == "X" && board[4] == "X" && board[8] == "X"
+    return WIN_COMBINATIONS[6]
+  elsif board[6] == "X" && board[4] == "X" && board[2] == "X"
+    return WIN_COMBINATIONS[7]
+  end
   false
 
 end
