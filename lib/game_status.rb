@@ -26,7 +26,7 @@ def won?(board)
      win_index_6 = win_combination[5]
      win_index_7 = win_combination[6]
      win_index_8 = win_combination[7]
-     
+
      position_1 = board[win_index_1] # value of board at win_index_1
      position_2 = board[win_index_2] # value of board at win_index_2
      position_3 = board[win_index_3] # value of board at win_index_3
@@ -40,6 +40,6 @@ def won?(board)
      end
    end
   end
-  #position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1) 
+  #position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
 
 end
