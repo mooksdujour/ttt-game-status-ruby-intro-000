@@ -16,23 +16,30 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  if board[0] == "X" && board[1] == "X" && board[2] == "X"
-    return WIN_COMBINATIONS[0]
-  elsif board[3] == "X" && board[4] == "X" && board[5] == "X"
-    return WIN_COMBINATIONS[1]
-  elsif board[6] == "X" && board[7] == "X" && board[8] == "X"
-    return WIN_COMBINATIONS[2]
-  elsif board[0] == "O" && board[3] == "O" && board[6] == "O"
-    return WIN_COMBINATIONS[3]
-  elsif board[1] == "O" && board[4] == "O" && board[7] == "O"
-    return WIN_COMBINATIONS[4]
-  elsif board[2] == "O" && board[5] == "O" && board[8] == "O"
-    return WIN_COMBINATIONS[5]
-  elsif board[0] == "X" && board[4] == "X" && board[8] == "X"
-    return WIN_COMBINATIONS[6]
-  elsif board[6] == "O" && board[4] == "O" && board[2] == "O"
-    return WIN_COMBINATIONS[7]
+  def won?(board)
+   WIN_COMBINATIONS.each do |win_combination|
+     win_index_1 = win_combination[0]
+     win_index_2 = win_combination[1]
+     win_index_3 = win_combination[2]
+     win_index_4 = win_combination[3]
+     win_index_5 = win_combination[4]
+     win_index_6 = win_combination[5]
+     win_index_7 = win_combination[6]
+     win_index_8 = win_combination[7]
+     
+     position_1 = board[win_index_1] # value of board at win_index_1
+     position_2 = board[win_index_2] # value of board at win_index_2
+     position_3 = board[win_index_3] # value of board at win_index_3
+     position_4 = board[win_index_4] # value of board at win_index_4
+     position_5 = board[win_index_5] # value of board at win_index_5
+     position_6 = board[win_index_6] # value of board at win_index_6
+     position_7 = board[win_index_7] # value of board at win_index_7
+     position_8 = board[win_index_8] # value of board at win_index_8
+     if position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
+       return WIN_COMBINATIONS[0]
+     end
+   end
   end
-  false
+  #position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1) 
 
 end
