@@ -34,7 +34,14 @@ def won?(board)
      position_6 = board[win_index_6] # value of board at win_index_6
      position_7 = board[win_index_7] # value of board at win_index_7
      position_8 = board[win_index_8] # value of board at win_index_8
-     if (position_1 == "X" || position_1 == "O") && position_taken?(board, win_index_1)
+     if ((position_1 == "X" || position_1 == "O") && position_taken?(board, win_index_1)) ||
+        ((position_2 == "X" || position_2 == "O") && position_taken?(board, win_index_2)) ||
+        ((position_3 == "X" || position_3 == "O") && position_taken?(board, win_index_3)) ||
+        ((position_4 == "X" || position_4 == "O") && position_taken?(board, win_index_4)) ||
+        ((position_5 == "X" || position_5 == "O") && position_taken?(board, win_index_5)) ||
+        ((position_6 == "X" || position_6 == "O") && position_taken?(board, win_index_6)) ||
+        ((position_7 == "X" || position_7 == "O") && position_taken?(board, win_index_7)) ||
+        ((position_8 == "X" || position_8 == "O") && position_taken?(board, win_index_8))
        return win_combination
      end
    end
