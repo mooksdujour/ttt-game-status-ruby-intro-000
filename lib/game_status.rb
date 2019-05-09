@@ -14,3 +14,11 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [6,4,2]
 ]
+
+def won?(board)
+  if board[0] == "X" && board[1] == "X" && board[2] == "X"
+  return WIN_COMBINATIONS[0][0] # return the win_combination indexes that won.
+end
+  false
+
+end
